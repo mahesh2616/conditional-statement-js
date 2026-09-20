@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Count Button Clicks</title>
+</head>
+
+<body>
+
+    <button onclick="countClicks()">Click Me</button>
+
+    <p id="clickCount">0</p>
+
+    <script>
+
+        let count = 0;
+
+        function countClicks() {
+
+            count++;
+
+            document.getElementById('clickCount').textContent = count;
+
+        }
+
+    </script>
+
+</body>
+</html>

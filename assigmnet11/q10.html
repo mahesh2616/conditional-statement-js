@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Change Button Text</title>
+
+    <style>
+
+        body {
+            text-align: center;
+            background-color: lightblue;
+            padding-top: 50px;
+        }
+
+        button {
+            background-color: purple;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <button id="myButton" onclick="changeButtonText()">
+        Click Me
+    </button>
+
+    <script>
+
+        function changeButtonText() {
+
+            document.getElementById('myButton').textContent = '✅ Clicked';
+
+        }
+
+    </script>
+
+</body>
+</html>

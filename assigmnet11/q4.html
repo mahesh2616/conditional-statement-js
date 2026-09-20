@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Element</title>
+</head>
+
+<body>
+
+    <div id="container"></div>
+
+    <button onclick="addElement()">Add Element</button>
+
+    <script>
+
+        function addElement() {
+
+            let newElement = document.createElement("p");
+
+            newElement.textContent = "🚀 Welcome to JavaScript!";
+
+            document.getElementById("container").appendChild(newElement);
+
+        }
+
+    </script>
+
+</body>
+</html>

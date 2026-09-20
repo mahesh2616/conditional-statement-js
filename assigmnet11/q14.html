@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form Validation</title>
+</head>
+<body>
+	<form id="myForm" onsubmit="return validateForm()">
+    	<input type="text" id="name" placeholder="Enter your name">
+    	<input type="submit" value="Submit">
+	</form>
+	<p id="error" style="color: red;"></p>
+ 
+	<script>
+    	function validateForm() {
+        	var name = document.getElementById('name').value;
+        	if (name === '') {
+                document.getElementById('error').textContent = 'Name is required';
+            	return false;
+        	}
+        	return true;
+    	}
+	</script>
+</body>
+</html>

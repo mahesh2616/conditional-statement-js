@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Toggle Class</title>
+
+    <style>
+
+        body {
+            text-align: center;
+            background-color: lightblue;
+            font-family: Arial;
+            padding-top: 50px;
+        }
+
+        #paragraph {
+            font-size: 25px;
+            color: purple;
+        }
+
+        .highlight {
+            
+            color: red;
+            padding: 10px;
+        }
+
+        button {
+            background-color: purple;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <p id="paragraph"> Welcome to JavaScript!</p>
+
+    <button onclick="toggleClass()">Toggle Class</button>
+
+    <script>
+
+        function toggleClass() {
+
+            document.getElementById('paragraph')
+                .classList.toggle('highlight');
+
+        }
+
+    </script>
+
+</body>
+</html>

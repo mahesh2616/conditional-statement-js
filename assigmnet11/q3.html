@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Hide</title>
+</head>
+
+<body>
+
+    <p id="paragraph">🚀 Welcome to My Website!</p>
+
+    <button onclick="toggleVisibility()">Show / Hide</button>
+
+    <script>
+
+        function toggleVisibility() {
+
+            let paragraph = document.getElementById("paragraph");
+
+            if (paragraph.style.display === "none") {
+                paragraph.style.display = "block";
+            }
+            else {
+                paragraph.style.display = "none";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

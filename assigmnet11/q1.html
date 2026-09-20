@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+
+    <p id="text">Original Text</p>
+
+    <button onclick="changeText()">click here 1</button>
+    <br><br><br>
+
+    <button onclick="changeText2()">click here 2</button>
+
+    <script>
+
+        function changeText() {
+
+            let text = document.getElementById("text");
+
+            text.textContent = "🙏 Ganpati Bappa Morya..! 🚩🐘";
+            text.style.color = "red";
+        }
+
+
+        function changeText2() {
+
+            let text = document.getElementById("text");
+
+            text.textContent = "🌺 Mangal Murti Morya..! 🙏🚩";
+            text.style.color = "blue";
+        }
+
+    </script>
+
+</body>
+</html>
