@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js test</title>
+</head>
+<body>
+
+    <script>
+        // Reverse the characters in a string.
+// Input: "hello" → Output: "olleh"
+console.log("1. Reverse a String")
+
+function reverseString(str) {
+    // let reversed = ""
+
+    // for(let i = str.length - 1; i >= 0; i--){
+    //     reversed += str[i]
+    // }
+    // return reversed
+
+    return str.split("").reverse().join("");
+}
+console.log(reverseString("hello"))
+
+
+
+// Calculate the factorial of a given number n.
+console.log("\n2. Factorial of a Number")
+
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1
+    }
+    return n * factorial(n - 1)
+}
+
+console.log(factorial(5))
+
+
+// Check if a string is the same forward and backward.
+// Input: "madam" → true
+
+console.log("\n3. Check for Palindrome")
+
+function isPalindrome(str) {
+    const reversed = str.split("").reverse().join("");
+
+    return str === reversed
+}
+
+console.log(isPalindrome("madam"))
+
+// Return the maximum number in an array.
+console.log("\n4. Find the Largest Number in an Array")
+
+function findLargest(arr) {
+    let max = arr[0]
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i]
+        }
+    }
+
+    return max
+}
+
+console.log(findLargest([1, 3, 6, 7, 2, 4]))
+
+// Return the total of all numbers in an array.
+console.log("\n5. Sum All Numbers in an Array")
+
+function sumOfElements(arr) {
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+    }
+
+    return sum
+}
+
+console.log(sumOfElements([1, 2, 3, 4, 5]))
+
+
+// Count the number of vowels (a, e, i, o, u) in a string.
+console.log("\n6. Count Vowels in a String")
+
+function countVowels(str) {
+    let vowels = ['a', 'e', 'i', 'o', 'u']
+
+    let str1 = str.toLowerCase();
+    let count = 0;
+
+    for (let i = 0; i < str1.length; i++) {
+        if (vowels.includes(str1[i])) {
+            count++;
+        }
+    }
+
+    return count
+}
+
+console.log(countVowels("alphabetVowels"))
+
+// Return the first n numbers in the Fibonacci sequence.
+console.log("\n7. Generate Fibonacci Sequence")
+
+function fibonacci(n) {
+    let seq = [0, 1]
+    while (seq.length < n) {
+        for (let i = 2; i < n; i++) {
+            seq[i] = seq[i - 1] + seq[i - 2]
+        }
+    }
+    return seq
+}
+
+console.log(fibonacci(10))
+
+
+// Determine whether a number is even or odd.
+console.log("\n8. Check Even or Odd")
+function isEven(num) {
+    return num % 2 === 0 ? "Even" : "Odd";
+}
+console.log(isEven(4));
+console.log(isEven(7));
+
+// Capitalize the first letter of each word in a sentence.
+console.log("\n9. Capitalize First Letter of Each Word")
+function capitalizeWords(str) {
+    let words = str.split(" ")
+
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+    }
+
+    return words.join(" ")
+}
+console.log(capitalizeWords("i am learning javascript"))
+
+// Return an array with all duplicates removed.
+console.log("\n10. Remove Duplicates from an array")
+function removeDuplicates(arr) {
+    let result = []
+    for (let i = 0; i < arr.length; i++) {
+        if (!result.includes(arr[i])) {
+            result.push(arr[i])
+        }
+    }
+
+    return result
+}
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
+
+// Return true if the number is prime, false otherwise.
+
+console.log("\n11. Check if a Number is Prime");
+
+function isPrime(num) {
+    if (num < 2) {
+        return false;
+    }
+
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+console.log(isPrime(7));
+console.log(isPrime(10));
+
+// Convert temperature from Celsius to Fahrenheit.
+console.log("\n12. Convert Celsius to Fahrenheit");
+
+function celsiusToFahrenheit(c) {
+    return (c * 9 / 5) + 32;
+}
+
+console.log(celsiusToFahrenheit(25));
+
+// Return the longest word in a given sentence.
+console.log("\n13. Find Longest Word in a Sentence");
+
+function longestWord(str) {
+    let words = str.split(" ");
+    let longest = words[0];
+
+    for (let i = 1; i < words.length; i++) {
+        if (words[i].length > longest.length) {
+            longest = words[i];
+        }
+    }
+
+    return longest;
+}
+
+console.log(longestWord("I love learning javascript"));
+
+// Count the total number of words in a sentence.
+console.log("\n14. Count Words in a Sentence");
+
+function countWords(str) {
+    return str.split(" ").length;
+}
+
+console.log(countWords("I love learning javascript"));
+
+// Replace all instances of one word with another.
+console.log("\n15. Replace All Occurrences of a Word");
+
+function replaceWord(str, oldWord, newWord) {
+    return str.split(oldWord).join(newWord);
+}
+
+console.log(replaceWord("I like apple. apple is tasty", "apple", "mango"));
+
+// Return the second highest number from an array.
+console.log("\n16. Find the Second Largest Number");
+
+function secondLargest(arr) {
+    let largest = -Infinity;
+    let second = -Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            second = largest;
+            largest = arr[i];
+        } else if (arr[i] > second && arr[i] !== largest) {
+            second = arr[i];
+        }
+    }
+
+    return second;
+}
+
+console.log(secondLargest([10, 5, 30, 20, 40]));
+
+// Return an array of elements common to two arrays.
+console.log("\n17. Find Common Elements");
+
+function commonElements(arr1, arr2) {
+    let result = [];
+
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr2.includes(arr1[i]) && !result.includes(arr1[i])) {
+            result.push(arr1[i]);
+        }
+    }
+
+    return result;
+}
+
+console.log(commonElements([1, 2, 3, 4], [3, 4, 5, 6]));
+
+// Sort a given array of numbers in ascending order.
+console.log("\n18. Sort an Array");
+
+function sortNumbers(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+
+    return arr;
+}
+
+console.log(sortNumbers([5, 2, 8, 1, 3]));
+
+// Repeat a given string n times.
+// Input: "hi", 3 → Output: "hihihi"
+
+console.log("\n19. Repeat a String n Times");
+
+function repeatString(str, n) {
+    let result = "";
+
+    for (let i = 0; i < n; i++) {
+        result += str;
+    }
+
+    return result;
+}
+
+console.log(repeatString("hi", 3));
+
+// Return true if all characters in a string are different.
+console.log("\n20. Check Unique Characters");
+
+function uniqueCharacters(str) {
+    for (let i = 0; i < str.length; i++) {
+        for (let j = i + 1; j < str.length; j++) {
+            if (str[i] === str[j]) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
+console.log(uniqueCharacters("abcde"));
+console.log(uniqueCharacters("hello"));
+    </script>
+    
+</body>
+</html>
